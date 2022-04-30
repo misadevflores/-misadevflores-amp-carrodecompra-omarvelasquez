@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html ⚡ lang="en">
   <head>
@@ -63,13 +64,25 @@
       }
 
       .product {
-        width: 400px;
+        width: 30%;
           height: 650px;
         margin: 0 8px 24px 0;
         padding: 4px 8px 0 8px;
           background: #fff;
           border-radius: 5px;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      }
+     .filter-sort-selectors {
+      padding: 10px;
+        align-items: center;
+          width:60%;
+          height: 650px;
+         margin: 0 8px 24px 0;
+        padding: 4px 8px 0 8px;
+       
+          background: #fff;
+          border-radius: 5px;
+         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
       }
       .item{
           float: left;
@@ -104,18 +117,7 @@
       .total{font-family: 'Bebas Neue', cursive; font-size: 30px;margin: 10px; }
       .datos{font-size: 20px;font-family: 'Titillium Web', sans-serif;font-weight: 600;}
 
-      .filter-sort-selectors {
-      padding: 10px;
-        align-items: center;
-          width: 560px;
-          height: 650px;
-         margin: 0 8px 24px 0;
-        padding: 4px 8px 0 8px;
-       
-          background: #fff;
-          border-radius: 5px;
-         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-      }
+   
       .row{
           width: 260px;
           margin: 0px;
@@ -135,7 +137,9 @@
           font-family: 'Titillium Web', sans-serif; 
           background: crimson;
           color: #fff;
-         width: 90%;padding: 10px;margin: 10px
+         width: 90%;
+         padding: 10px;
+         margin: 10px;
         }
       .boton  button{
           text-align: center;
@@ -148,19 +152,18 @@
       }
       .left{
           display: inline-block;
-          width: 240px;
+          width: 20%;
       }
       #count{
           background: #fff;
           border-radius: 50%;
           color: crimson;padding: 8px;
       }
-      aside{
-        width: 80%;
-        
+     .contenido{
+        width: 70%;
         border-radius: 5px;
         padding:10px;
-        margin: 150px auto;
+         margin: 30px auto;
         background: #fff;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       }
@@ -180,20 +183,64 @@
        margin: 10px auto;
          display: inline-block
      }
-
+       @media (max-width: 760px) {
+          .product{
+              width: 100%;
+              height: auto;
+              margin:0px;
+              padding: 10px;
+              margin-bottom: 10px;
+          }
+          .filter-sort-selectors{
+              width: 100%;
+              padding: 10px;
+              margin:0px;
+              height: auto;
+              margin-bottom: 10px;
+          }
+          .contenido{
+              margin-top: 20px;
+              width: 90%;
+              margin: 10px;
+              margin-bottom: 20px;
+          }
+          .left{
+              width: 140px;
+              margin: 5px;
+          }
+          #ocultar{
+              margin-top: 640px;
+          }
+      }
+        
       @media (max-width: 460px) {
-        .filter-sort-selectors {
-          display: flex;
-          flex-flow: column;
-          align-items: flex-start;
-        }
-        .sort-by {
-          margin-left: 0;
-        }
-        .order-selector {
-          margin-left: 10px;
-          margin-bottom: 16px;
-        }
+          .product{
+              width: 100%;
+              height: auto;
+              margin:0px;
+              padding: 10px;
+              margin-bottom: 10px;
+          }
+          .filter-sort-selectors{
+              width: 100%;
+              padding: 10px;
+              margin:0px;
+              height: auto;
+              margin-bottom: 10px;
+          }
+          .contenido{
+              margin-top: 20px;
+              width: 90%;
+              margin: 10px;
+              margin-bottom: 20px;
+          }
+          .left{
+              width: 140px;
+              margin: 5px;
+          }
+          #ocultar{
+              margin-top: 600px;
+          }
       }
     </style>
   </head>
@@ -300,6 +347,7 @@
           <option value="Blue">Azul</option>
         </select>
         </div>
+        
           <div style="margin-top: 10px;" class="boton">
         
               <button id="username-submit" style="" onclick="addCarrito();">Añadir al Carrito</button>
@@ -312,16 +360,27 @@
       </div>
     </div>
      
-    </main><br>
+    </main>
+      <br>
+      <Br>
+      <br>
       <div id="carrito"> </div>
-    <aside id="ocultar">
+          <br>
+                <br>
+    
+      
+          <hr>
+    <div id="ocultar"  class="contenido" style=" margi0px;">
     <center><h3>Tu carrito</h3></center>
       
         <div id="obj"></div>
         <div class="total">Total: <span id="total">00.00</span>$$</div>
        <input type="button" style="width: 300px;padding: 20px;color: #FFF;border-radius: 20px  20px 3px;background: crimson;float: right;margin: 10px;cursor: pointer;" value="Comprar" id="compra">
-    </aside>
-    <aside>
+    </div>
+          <br>
+           <br>
+          <hr>
+    <div class="contenido">
     <center><h3>Agregar Pago</h3></center>
         <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-all-on-submit">
         <label>Nombre Completo</label><br>
@@ -357,7 +416,7 @@
           </template>
         </div>
       </form>
-    </aside>
+    </div >
         <script type="text/javascript">
         var c=0;
         var sum=0;
